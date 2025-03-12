@@ -1,0 +1,995 @@
+body{
+    /* display: flex; */
+    margin: 0;
+    border: 0;
+	background:#423d46;
+    overflow: hidden;
+}
+
+.colorfade{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: color1fadein 500ms forwards 11000ms ,colorfadein2 500ms forwards 11500ms ,colorfadein3 500ms forwards 12000ms ,colorfadeup1 500ms forwards 15500ms , colorfadeup2 500ms forwards 16000ms , colorfadeup3 500ms forwards 16500ms  , lastfadeout 1500ms ease forwards 21300ms ;
+}
+
+/* This is first slide css */
+
+.main-div {
+
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	color:#d8d0be;
+    align-items: center;
+    position: relative;
+    border: 2px solid transparent;
+    animation: borderslide 3000ms ease forwards 1500ms, fadeout 1500ms ease 5500ms forwards ;
+}
+
+.maindiv-fill-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%;
+    background-color: #bc835f;
+    animation: slideFill 1000ms ease-in-out 3500ms forwards; /* 1s delay */
+}
+
+@keyframes slideFill {
+    0% 
+    {
+        width: 0;
+    }
+    100% 
+    {
+        width: 100%; 
+    }
+}
+
+.hello{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 100px;
+    line-height: 100px;
+    color: rgb(222, 222, 174);
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+    animation: fadeIn 500ms forwards 500ms;
+    z-index: 1;
+}
+
+.name{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 !important;
+    font-size: 80px;
+    line-height: 80px;
+	color: #fcbb5e;
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(-30%);
+    animation: fadeIn2 500ms forwards 1000ms;
+}
+
+
+@keyframes fadeIn {
+    from
+    {
+		opacity: 0;
+		transform:scale(0) rotate(-45deg);
+	}
+	to
+    {
+		opacity: 1;
+		transform:scale(1) rotate(0deg);
+	}
+}
+
+
+@keyframes fadeIn2 {
+    from
+    {
+        opacity: 0;
+        transform: translateY(-30%);
+	}
+	to
+    {
+        opacity: 1;
+        transform: translateY(0%);
+	}
+}
+
+@keyframes borderslide {
+
+    0%
+    {
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+    25%
+    {
+        border-top: 2px solid #bc835f;
+    }
+
+    50%
+    {
+        border-top: 2px solid #bc835f;
+        border-right: 2px solid #bc835f;
+    }
+
+    75%
+    {
+        border-top: 2px solid #bc835f;
+        border-right: 2px solid #bc835f;
+         border-bottom: 2px solid #bc835f;
+    }
+
+    100%
+    {
+        border-top: 2px solid #bc835f;
+        border-right: 2px solid #bc835f;
+         border-bottom: 2px solid #bc835f;
+        border-left: 2px solid #bc835f;
+    }
+    
+}
+
+
+
+
+@keyframes fadeout {
+    to
+    {
+        opacity: 0;
+    }
+}
+
+
+
+/* second slide css */
+
+.main-div2 {
+    position: absolute;
+	text-align: center;
+	width:100%;
+	height: auto;
+	top:50%;
+	transform:translateY(-50%);
+	letter-spacing: 0.1em;
+    /* background-color: red; */
+    animation: slide2fadeout 2000ms ease 9000ms forwards ;
+}
+
+.t1, .t2, .t3{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 0;
+    line-height: 80px;
+    font-size: 80px;
+    color: rgb(222, 222, 174);
+    transform: translateY(-50%);  
+}
+
+.t4{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 0;
+    line-height: 80px;
+    font-size: 80px;
+    color: yellow;
+}
+
+.t1{
+    animation: t1slide 500ms ease 7000ms forwards;
+}
+
+.t2{
+    animation: t2slide 500ms ease 7500ms forwards;
+}
+
+.t3{
+    animation: t3slide 500ms ease 8000ms forwards;
+}
+
+.t4{
+    animation: t4slide 500ms ease 8500ms forwards;
+}
+
+@keyframes t1slide {
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes t2slide {
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes t3slide {
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes t4slide {
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide2fadeout {
+    0%
+    {
+        transform: translateY(-50%) rotate(0deg);
+        left: 0;
+        opacity: 1;
+    }
+    
+    100%
+    {
+        transform: translateY(-50%) rotate(90deg);
+        left: 50%;
+        opacity: 0;
+    }
+
+}
+
+@keyframes color1fadein {
+    0% 
+    {
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+        background-color: orange;
+    }
+}
+
+@keyframes colorfadein2 {
+    0%
+    {
+        transform: translateX(-100%);
+        background-color: rgb(231, 191, 119);
+    }
+    100%
+    {
+        transform: translateX(0%);
+        background-color: rgb(231, 191, 119);
+    }
+}
+
+@keyframes colorfadein3 {
+    0%
+    {
+        transform: translateX(-100%);
+        background-color: rgb(193, 46, 181);
+    }
+    100%
+    {
+        transform: translateX(0%);
+        background-color: rgb(193, 46, 181);
+    }
+}
+
+
+/* Slide3 css */
+
+.main-div3{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    animation: slide3fadeout 1000ms ease forwards 14500ms;
+}
+
+.tt1,.tt2{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100px;
+    font-size: 100px;
+    opacity: 0;
+}
+
+.tt1{
+    color: rgb(222, 222, 174);;
+    animation: tt1slide 1000ms ease 12500ms forwards;
+}
+
+.tt2{
+    color: yellow;
+    animation: tt2slide 1000ms ease 13500ms forwards;
+}
+
+@keyframes tt1slide {
+    0%
+    {
+        opacity: 1;
+        transform: translateY(-75%);
+    }
+    25%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    50%
+    {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+    70%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    90%
+    {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes tt2slide {
+    0%
+    {
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 0.25;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    75%
+    {
+        opacity: 0.75;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+} 
+
+@keyframes slide3fadeout {
+    from
+    {
+        transform:rotate(0deg) scale(1) ;
+    }
+    to
+    {
+        transform:rotate(360deg) scale(0) ;
+        opacity: 0;
+    }
+}
+
+@keyframes colorfadeup1 {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+        background-color: azure;
+    }
+}
+
+@keyframes colorfadeup2 {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+        background-color: yellow;
+    }
+}
+
+@keyframes colorfadeup3 {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+        background-color: #1080f2;
+    }
+}
+
+/* slide4 css */
+
+.main-div4{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* background-color: red; */
+    animation: widthtransition 1000ms forwards 17000ms , heighttransition 300ms forwards 18000ms;
+}
+
+.div1{
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+}
+
+.div2{
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+}
+
+.txt1 , .txt2, .txt3, .txt4, .txt5, .txt6, .txt7, .txt8, .txt9, .txt10, .txt11, .txt12, .txt13, .txt14{
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    opacity: 0;
+    color: #1080f2;
+}
+
+.txt1 {
+    animation: Letteruptransition 100ms forwards 18300ms;
+}
+
+.txt2 {
+    animation: Letteruptransition 100ms forwards 18400ms;
+}
+
+.txt3 {
+    animation: Letteruptransition 100ms forwards 18500ms;
+}
+
+.txt4 {
+    animation: Letteruptransition 100ms forwards 18600ms;
+}
+
+.txt5 {
+    animation: Letteruptransition 100ms forwards 18700ms;
+}
+
+.txt6 {
+    animation: Letteruptransition 100ms forwards 18800ms;
+}
+
+.txt7 {
+    animation: Letteruptransition 100ms forwards 18900ms;
+}
+
+.txt8 {
+    animation: Letteruptransition 100ms forwards 19000ms;
+}
+
+.txt9 {
+    animation: Letteruptransition 100ms forwards 19100ms;
+}
+
+.txt10 {
+    animation: Letteruptransition 100ms forwards 19200ms;
+}
+
+.txt11 {
+    animation: Letteruptransition 100ms forwards 19300ms;
+}
+
+.txt12 {
+    animation: Letteruptransition 100ms forwards 19400ms;
+}
+
+.txt13 {
+    animation: Letteruptransition 100ms forwards 19500ms;
+}
+
+.txt14 {
+    animation: Letteruptransition 100ms forwards 19600ms;
+}
+
+@keyframes widthtransition {
+    0%
+    {
+        background-color: white;
+        height: 0.5%;
+        width: 0;
+    }
+    100%
+    {
+        background-color: white;
+        height: 0.5%;
+        width: 100%;
+    }
+}
+
+@keyframes heighttransition {
+    0%
+    {
+        height: 0.5%;
+    }
+    100%
+    {
+        height: 25%;
+    }
+}
+
+@keyframes Letteruptransition {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* image css */
+
+.imgdiv{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.imgdiv1{
+    opacity: 0;
+    animation: imganimation 300ms ease forwards 18300ms;
+}
+
+.imgdiv2{
+    opacity: 0;
+    animation: imganimation 300ms ease forwards 18300ms;
+}
+
+.img{
+    width: 70px;
+    height: 100px;
+}
+
+@keyframes imganimation {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+/* flagimg div */
+
+.flagimgdiv{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: -55px;
+    width: 100%;
+    opacity: 0;
+    animation: flagimg 300ms ease forwards 18500ms;
+}
+
+.flagimg{
+    width: 400px;
+    height: 200px;
+}
+
+@keyframes flagimg {
+    0%
+    {
+        opacity: 0;
+        z-index: 1;
+        
+    }
+    100%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+/* giftbox div */
+
+.giftboxdiv{
+    display: flex;
+    position: absolute;
+    /* background-color: red; */
+    transform: translateY(260%);
+}
+
+.gift{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.gift1{
+    opacity: 0;
+    animation: giftanime1 500ms ease 19700ms forwards;
+}
+
+.gift2 {
+    opacity: 0;
+    transform: translateY(-10%);
+    animation: giftanime2 500ms ease 20200ms forwards;
+}
+
+.gift3{
+    opacity: 0;
+    animation: giftanime1 500ms ease 20700ms forwards;
+}
+
+@keyframes giftanime1 {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes giftanime2 {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes giftanime3 {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+/* side flags div css */
+
+.flagsdiv1{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    animation:sideflaganime 500ms ease 18500ms forwards, sideflaganime2 500ms ease 18500ms forwards;
+}
+
+.flag1{
+    transform: rotate(-20deg) translateX(10px) translateY(20px);
+}
+
+.flag2{
+    
+    transform: rotate(20deg) translateX(-10px) translateY(20px);
+}
+
+@keyframes sideflaganime {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@keyframes sideflaganime2 {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+/* star animation */
+
+.starsdiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.starimg{
+    position: absolute;
+    animation: backgroundanimation 200ms ease forwards 18300ms;
+    opacity: 0;
+}
+
+@keyframes backgroundanimation {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        z-index: -1;
+    }
+}
+
+/* last fade out animation */
+
+@keyframes lastfadeout {
+    0%
+    {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        transform-origin: center center;
+    }
+    100%
+    {
+        transform: rotate(360deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* secondcanvas css */
+
+.secondcanvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: backgroundslide1 500ms ease forwards 22800ms ;
+    z-index: 1;
+}
+
+
+
+
+@keyframes backgroundslide1 {
+    0%
+    {
+        transform: translateY(-200%);
+        background-color: whitesmoke;
+    }    
+    100%
+    {
+        transform: translateY(-100%);
+        background-color: whitesmoke;
+    }
+}
+
+/* greeting Css */
+
+.greeting{
+    width: 85%;
+    height: 85%;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 20px 4px rgba(255, 255, 255, 0.1);
+    color: #dcc99e;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 18px;
+    opacity: 0;
+    line-height: 28px;
+    word-spacing: 8px;
+    font-family: 'calibri';
+    transform: rotate(0deg) scale(1);
+    animation: greeting-animation 300ms ease forwards 23700ms;
+}
+
+.greeting span{
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 1s ease;
+    animation: greetingtextanimation 0.5s forwards;
+}
+
+@keyframes greeting-animation {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes greetingtextanimation {
+    to
+    {
+        opacity: 1;
+    }
+}
+
+/* Next btn div */
+
+.nextbtndiv{
+    display: flex;
+    position: absolute;
+    top: 85%;
+    left: 87%;
+}
+
+
+.nextbtn{
+    padding: 10px;
+    width: 80px;
+    background-color: #ff3366;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    animation: nextbtnanimation 1000ms ease forwards 90000ms;
+    transition: background-color 0.3s ease;
+}
+
+.nextbtn:hover{
+    background-color: #ff6699;
+}
+
+@keyframes nextbtnanimation {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes greetingfadeout{
+    0%
+    {
+      transform : rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    100%
+    {
+      transform : rotate(360deg) scale(0);
+      opacity : 0;
+    }
+  }
+
+ @keyframes nextbtnfadeout{
+    0%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+/* Heart animations */
+
+.heartgrapics{
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+
+
+.heart {
+    width: 700px;
+    height: 700px;
+}
+
+.heart-path {
+    fill: none;
+    stroke: #ff3366;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+.heart-fill {
+    fill: url(#fillGradient);
+    opacity: 0;
+}
+
+/* Animation for drawing the heart outline */
+@keyframes drawHeart {
+    0% 
+    {
+        stroke-dashoffset: 200;
+    }
+    100% 
+    {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Animation for filling the heart */
+@keyframes fillHeart {
+    0% 
+    {
+        opacity: 0;
+    }
+    100%
+     {
+        opacity: 1;
+    }
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+    0%, 100% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes displayheart{
+    0%
+    {
+        opacity: 0;
+        z-index: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
